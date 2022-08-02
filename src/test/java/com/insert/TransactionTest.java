@@ -12,8 +12,8 @@ class TransactionTest {
     String sql3 = "insert into person(id,name) values (2,'Valentin')";
 
     @Test
-    void countNumberOfRowsAffected() throws SQLException {
+    void countNumberOfRowsAffectedTest() throws SQLException {
         Transaction transaction = new Transaction();
-        assertEquals(0, transaction.countNumberOfRowsAffected(sql1, sql2, sql3));
+        assertEquals(0, transaction.countNumberOfRowsAffected());
     }
 }

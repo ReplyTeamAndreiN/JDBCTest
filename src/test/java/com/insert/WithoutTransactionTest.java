@@ -13,8 +13,8 @@ class WithoutTransactionTest {
     String sql3 = "insert into person(id,name) values (2,'Valentin')";
 
     @Test
-    void countNumberOfRowsAffected() throws SQLException {
-        Transaction transaction = new Transaction();
-        assertEquals(2, transaction.countNumberOfRowsAffected(sql1, sql2, sql3));
+    void countNumberOfRowsAffectedTest() throws SQLException {
+        WithoutTransaction withoutTransaction = new WithoutTransaction();
+        assertEquals(2, withoutTransaction.countNumberOfRowsAffected());
     }
 }
